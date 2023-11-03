@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none; 
+}
+
+body {
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+}
+
+:root {
+    /* Font Sizes & Family */
+  
+    --body-font: "Sofia Pro", sans-serif;
+  
+    /* Color Variables */
+    --primary-color: #F9DCE7;
+    --primary-color-hover: #FFFFF0;
+    --secondary-color: #F0E8DC;
+    --text-color: #252525;
+    --text-color-light: #F1E8F4;
+    --border-color: #E0B2C6;
+    --white-color: white;
+    --section-bg: #F0E3E9;
+  
+    /* transition */
+    --tran-0-2: 0.2s;
+    --tran-0-3: 0.3s;
+    --tran-0-5: 0.5s;
+  }
+ 
+ /*////////// Navigation Bar //////////*/
+ 
+ @media (max-width: 1200px) {
+    nav {
+        padding: 20px 1%;
+        height: 11vh !important;
+
+    }
+
+  /* /////// Hero ////// */
+  .hero-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+  }
+
+  .hero {
+  flex-direction: column;
+  padding: 0;
+  }
+
+  .hero-image {
+    margin-right: 0px;
+  }
+
+  .hero-image img {
+    border-left: none;
+    border-top: 1.5px solid
+  }
+
+  .hero-content {
+    padding: 0px;
+    font-size: 16px;
+    margin-right: 20px;
+
+  }
+  
+  .hero-content .section-title {
+    font-size: 64px;
+    margin-top: 100px;
+  }
+  
+  .hero-content .section-text {
+    font-size: 32px;
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+
+  .hero-btn {
+    padding: 22px 64px;
+    width: 100%;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+  
+
+
+  /* /////// About ///////*/
+
+  .about-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .about {
+    padding: 20px;
+    flex-direction: column;
+    padding-top: 64px;
+  }
+  .about-image {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    padding: 0px;
+    font-size: 16px;
+  }
+
+  .about-content .section-title {
+    font-size: 64px;
+  }
+  
+  .about-content .section-text {
+    font-size: 32px;
+  }
+
+  
+
+  footer{
+    margin-top: 72px;
+  }
+
+  footer .content{
+    padding: 30px 40px 40px 40px;
+  }
+
+  .content .link-boxes .box li a{
+    font-size: 14px;
+  }
+
+  footer .bottom-details .bottom_text{
+    
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+ }
+
+ @media (max-width: 950px) {
+
+    nav {
+        position: fixed;
+        padding: 20px 2%;
+        height: 15vh;
+        margin-top: 0px;
+      
+
+    }
+
+    .logo {
+        width: 8em !important;
+    }
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: -1400px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        transition: all 0.5s ease;
+        text-align: center;
+        height: 100vh;
+  
+    }
+
+    .navlist a{
+        color:var(--text-color);
+        padding: 1.5rem;
+        margin: 1rem;
+        display: block;
+  
+    }
+
+    .navlist a:hover {
+       color: #E860A2; 
+    }
+
+    .navlist.open {
+        top: 100%;
+    }
+
+    .nav-btn {
+        padding: 16px 28px;
+        border-radius: 50px;
+        font-size: 20px;
+        border: 2px solid transparent;
+        transition: all 0.4s ease;
+        
+    }
+
+
+
+
+/* /////// Hero ////// */
+
+  .hero-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  
+
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+  .hero-image {
+    margin-right: 0px;
+  }
+
+  .hero-image img {
+    border-left: none;
+    border-top: 1.5px solid
+  }
+
+  .hero-content {
+    padding: 0;
+    font-size: 16px;
+    margin-right: 20px;
+
+  }
+  
+  .hero-content .section-title {
+    font-size: 48px;
+    margin-top: 120px;
+    
+  }
+  
+  .hero-content .section-text {
+    font-size: 24px;
+    margin-top: 48px;
+    margin-bottom: 56px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    padding: 22px 64px;
+    font-size: 14px;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    font-family: 'Sofia Pro', sans-serif;                                             
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+
+
+
+
+/*////////// Featured //////////*/
+
+.featured-on {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.featured-img {
+  width: 56px;
+  height: 56px;
+}
+
+
+
+/*////////// Services //////////*/
+
+.card-list .card-item {
+  padding: 20px;
+}
+
+.heading .section-heading {
+  font-size: 32px;
+  color: black;
+  position: relative;
+  margin-top: 48px;
+  font-family: 'Playfair Display', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.services-btn {
+
+  width: 92%;
+  font-size: 14px;
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+
+
+/*////////// Marquees //////////*/
+
+.marquee__content > * {
+  font-size: 40px;
+  padding: 1.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-family: 'Playfair Display', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: light;
+  text-transform: uppercase;
+}
+
+   
+
+ /*////// About ////// */
+
+  .about-container {
+      width: 100%;
+      margin: 0 auto;
+      background-color: white;
+      border-bottom: 1.5px solid black;
+      text-align: center;
+    }
+
+.about {
+      margin-top: 0px;
+      padding-top: 64px;
+      padding-bottom: 48px;
+    }
+
+ .about-content .section-title {
+      font-size: 40px;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+    
+.about-content .section-text {
+      font-size: 20px;
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+.about-image {
+      margin-bottom: 32px;
+      width: 100%;
+    }
+
+.attention-btn {
+      padding-right: 0px;
+      padding-left: 0px;
+      width: 100%;
+      font-size: 14px;
+      border: 2px solid transparent;
+      transition: all 0.4s ease;
+      letter-spacing: 1.5px;
+      text-align: center;
+  }
+
+
+/* ////////// Values ////////// */
+
+.values-container {
+  margin-top: 72px;
+  max-width: 100%;
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+.card {
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 24px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.custom-icon {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  margin-bottom: 20px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+   /* ////////// Schedule Appointment ////////// */
+
+   .schedule {
+    background-color: #F6D3FB;
+    padding-bottom: 16px;
+    padding-right: 0px;
+    padding-left: 0px;
+    border-top: 1.5px solid black;
+  }
+
+  
+  .appointment-title {   
+    font-size: 40px;
+  }
+  
+  .cta-button {
+    width: 100%;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+    letter-spacing: 1.5px;
+    text-align: center;
+    
+  }
+
+
+   /*////////// Instagram ////////// */
+
+ .instagram {
+  margin: 20px auto;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+.instagram .instagram-heading {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+
+ #instagram-section {
+  height: 40vh;
+}
+
+
+
+
+/* Footer */
+
+footer {
+  margin-top: 0px;
+}
+
+.bottom-details {
+  padding-bottom: 24px;
+}
+ 
+}
+
+ 

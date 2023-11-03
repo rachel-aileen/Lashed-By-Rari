@@ -1,0 +1,855 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
+
+@import url('https://fonts.cdnfonts.com/css/sofia-pro');
+@import url('https://fonts.cdnfonts.com/css/playfair-display');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none; 
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+    background-color: #F9DCE7;
+    background-repeat: no-repeat;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+
+
+}
+
+:root {
+    /* Font Sizes & Family */
+  
+    --body-font: "Sofia Pro", sans-serif;
+  
+    /* Color Variables */
+    --primary-color: #F9DCE7;
+    --primary-color-hover: #FFFFF0;
+    --secondary-color: #F0E8DC;
+    --text-color: #252525;
+    --text-color-light: #F1E8F4;
+    --border-color: #F9DCE7;
+    --white-color: white;
+    --section-bg: #F9DCE7;
+  
+    /* transition */
+    --tran-0-2: 0.2s;
+    --tran-0-3: 0.3s;
+    --tran-0-5: 0.5s;
+  }
+
+
+/*////////// Navigation Bar //////////*/
+
+
+nav {
+
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 4%;
+    transition: all 0.5s ease;
+    background: white;
+    height: 12vh;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    position: fixed;
+    border-bottom: 1.5px solid black;
+  
+}
+
+.logo {
+    width: 8.5em !important;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    margin: 0px 5px;
+    padding: 4px 32px;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.5s ease;
+    font-family: 'Sofia Pro', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  
+
+
+}
+
+.navlist a:hover {
+    color: #E860A2;
+}
+
+
+
+#menu-icon {
+    color: var(--text-color);
+    font-size: 40px;
+    z-index: 10001;
+    cursor: grab;
+    display: none;
+}
+
+/* ////////// Hero ////////// */
+.hero-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #E860A2;
+  border-bottom: 1.5px solid black;
+  margin-top: 56px;
+ 
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.hero-image {
+  flex: 1.2;
+  overflow: hidden;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-left: 1.5px solid #252525;
+}
+
+.hero-content {
+  flex: 1;
+  padding-left: 40px;
+  padding-right: 40px; /* Adjust padding to control spacing */
+  margin-left: 4%;
+  padding-top: 64px;
+}
+
+.hero-content .section-title {
+  font-size: 64px;
+  color: var(--text-color);
+  font-family: 'Playfair Display', sans-serif;                                   
+  text-transform: none;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+
+.hero-content .section-text {
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--text-color);
+  font-family: 'Sofia Pro', sans-serif;                                           
+  font-weight: 300;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 22px 64px;
+  color: var(--primary-color-hover);
+  background: var(--text-color);
+  font-size: 16px;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  font-family: 'Sofia Pro', sans-serif;                                             
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.hero-btn:hover {
+  background-color: #F6D3FB;
+  color: black;
+}
+
+/* ///////// Featured //////// */
+
+.featured-on {
+  text-align: center;
+  color: var(--text-color);
+  font-family: 'Sofia Pro', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  font-size: 24px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.featured {
+  background-color: var(--white-color);
+  padding: 3em 2em;
+  border-bottom: 1.5px solid black;
+}
+
+
+
+
+
+/* ///////// Services ///////// */
+
+.heading {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.heading .section-heading {
+  font-size: 40px;
+  color: black;
+  position: relative;
+  margin-top: 56px;
+  font-family: 'Playfair Display', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  max-width: 1250px;
+  margin: 80px auto;
+  padding: 2px;
+  gap: 16px;
+  height: 50%;
+  margin-top: 12px;
+}
+.card-list .card-item {
+  background: #F9DCE7;
+  padding: 0px;
+  border-radius: 0px;
+
+  list-style: none;
+  cursor: grab;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.card-list .card-item:hover {
+  transform: scale(1.01);
+}
+
+.card-list .card-item img {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid black;
+}
+
+.card-list span {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 2px 2px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.card-list .secondary-btn {
+  color: black;
+  background-color: none;
+  font-family: 'Sofia Pro', sans-serif;
+  transition: all 0.4s ease;
+}
+
+.card-list .secondary-btn:hover {
+  color: black;
+  background-color: #F6D3FB;
+}
+
+.card-list .designer {
+  color: #2968a8;
+}
+.card-list .editor {
+  background-color: #d6f8d6; 
+  color: #205c20;
+}
+
+.services-btn {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 22px 64px;
+  color: var(--primary-color-hover);
+  background: var(--text-color);
+  font-size: 16px;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  font-family: 'Sofia Pro', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.services-btn:hover {
+  color: black;
+  background-color: #F6D3FB;
+}
+
+
+
+/*////////// Marquees //////////*/
+
+.marquee-wrapper{
+  background-color: #E860A2;
+  width: 100vw;
+
+}
+/* Marquee styles */
+.marquee {
+  --gap: 0rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  width: 100%;
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: fit-content;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* Enable animation */
+.enable-animation .marquee__content {
+  animation: scroll 50s linear infinite;
+}
+
+/* Attempt to size parent based on content. Keep in mind that the parent width is equal to both content containers that stretch to fill the parent. */
+.marquee--fit-content {
+  max-width: fit-content;
+}
+
+/* A fit-content sizing fix: Absolute position the duplicate container. This will set the size of the parent wrapper to a single child container. Shout out to Olavi's article that had this solution 👏 @link: https://olavihaapala.fi/2021/02/23/modern-marquee.html  */
+.marquee--pos-absolute .marquee__content:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Enable position absolute animation on the duplicate content (last-child) */
+.enable-animation .marquee--pos-absolute .marquee__content:last-child {
+  animation-name: scroll-abs;
+}
+
+@keyframes scroll-abs {
+  from {
+    transform: translateX(calc(100% + var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Other page demo styles */
+.marquee__content > * {
+  flex: 0 0 auto;
+  color: black;
+  font-size: 56px;
+  padding: 1.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-family: 'Playfair Display', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: light;
+  text-transform: uppercase;
+}
+
+
+/*////////// About //////////*/
+
+.about-container {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  border-bottom: 1.5px solid black;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.about-image {
+  flex: 1.2;
+  margin-right: 40px;
+  overflow: hidden;
+}
+
+.about img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-content {
+  flex: 1;
+  padding-left: 40px;
+  padding-right: 40px; /* Adjust padding to control spacing */
+}
+
+.about-content .section-title {
+  font-size: 40px;
+  color: var(--text-color);
+  font-family: 'Playfair Display', sans-serif;
+  text-transform: none;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+
+.about-content .section-text {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text-color);
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;                                             
+  font-weight: 500;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+.attention-btn {
+  display: inline-block;
+  padding: 22px 64px;
+  color: var(--primary-color-hover);
+  background: var(--text-color);
+  font-size: 16px;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  font-family: 'Sofia Pro', sans-serif;                                             
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.attention-btn:hover {
+  background-color: #F6D3FB;
+  color: black;
+}
+
+/* ////////// Values ////////// */
+
+.values-container {
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 56px;
+  margin-bottom: 56px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  margin-right: 16px;
+  margin-left: 16px;
+  background: white;
+  padding: 20px 20px;
+  align-self: normal;
+  width: 20%;
+  border: 1.5px solid black;
+}
+
+.custom-icon {
+  fill:#F9DCE7;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  align-self: center;
+}
+
+.card-title {
+  font-size: 24px;
+  color: var(--text-color);
+  font-family: 'Playfair Display', sans-serif; 
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 17px;
+  font-family: 'Sofia Pro', sans-serif; 
+  line-height: 1.8;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+/* ////////// Schedule Appointment ////////// */
+
+.schedule {
+  background-color: #F6D3FB;
+  padding: 3em 2em;
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.wrap {
+  width: 100%;
+  
+}
+
+.centered {
+  position: relative;
+  padding: 16px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.appointment-content {
+  width: 100%;
+  height: 40vh;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-size: cover;
+  justify-content: center;
+  background-position: center;
+  background-color: #F6D3FB;
+}
+
+.appointment-title {
+  font-family: 'Playfair Display', sans-serif;    
+  font-size: 40px;
+  color: black;
+  padding: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+.cta-button {
+  display: inline-block;
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-family: "Sofia Pro", sans-serif;
+  text-transform: uppercase;
+  transition: background-color 1s;
+  letter-spacing: 2px;
+  cursor: grab;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 22px 64px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border: 2px solid transparent;
+}
+
+
+.cta-button:hover {
+  background-color: var(--border-color);
+  color: var(--white-color);
+}
+
+ /*////////// Instagram ////////// */
+
+ .instagram {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+.instagram .instagram-heading {
+  font-size: 20px;
+  color: black;
+  position: relative;
+  font-family: 'Sofia Pro', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+
+ #instagram-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 60vh;
+}
+
+#instagram-section .instagram-container {
+  max-width: 90%;
+  text-align: center; /* Center the image horizontally */
+}
+
+#instagram-section .responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+/* ////////// Footer ////////// */
+footer{
+  background: black;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin-top: 0px;
+  
+}
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0px;
+  height: 1px;
+  width: 100%;
+
+}
+footer .content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 10px 10px 10px 10px;
+}
+footer .content .top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details{
+  color: #fff;
+  font-size: 30px;
+}
+.content .top .media-icons{
+  display: flex;
+}
+.content .top .media-icons a{
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+footer .content .link-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box{
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name{
+  color: #fff;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 24px;
+  font-family: 'Playfair Display', sans-serif;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  
+}
+.link-boxes .box .link_name::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  
+}
+.content .link-boxes .box li{
+  margin: 20px 0;
+  list-style: none;
+  color: var(--white-color);
+  font-family: 'Playfair Display', sans-serif;                                             
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 16px;
+}
+.content .link-boxes .box li a{
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  font-family: 'Sofia Pro', sans-serif;                                             
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.content .link-boxes .box li a:hover{
+  opacity: 1;
+  text-decoration: none;
+  color: #E860A2;
+}
+
+footer .bottom-details{
+  width: 100%;
+  background: black;
+}
+footer .bottom-details .bottom_text{
+  max-width: 1250px;
+  margin: auto;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--white-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Sofia Pro', sans-serif;                                             
+  letter-spacing: 0.5px;
+  transition: all 0.4s ease;
+
+}
+.bottom-details .bottom_text a:hover{
+  opacity: 1;
+  text-decoration: none;
+  color: #E860A2;
+}
+.bottom-details .bottom_text a{
+  margin-right: 10px;
+}
+@media (max-width: 900px) {
+  footer .content .link-boxes{
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box{
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 700px){
+  footer{
+    position: relative;
+  }
+  .content .top .logo-details{
+    font-size: 26px;
+  }
+  .content .link-boxes .box li{
+    font-size: 14px;
+  }
+  .content .top .media-icons a{
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 3 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 60%;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a{
+    font-size: 14px;
+  }
+}
+@media (max-width: 520px){
+  footer::before{
+    top: 145px;
+  }
+  footer .content .top{
+    flex-direction: column;
+  }
+  .content .top .media-icons{
+    margin-top: 16px;
+  }
+  footer .content .link-boxes .box{
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box{
+    width: 100%;
+  }
+}
+
+
